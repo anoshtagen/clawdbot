@@ -1,0 +1,12 @@
+bot.on('message', (msg) => {
+  const chatId = msg.chat.id;
+  const text = msg.text.toLowerCase();
+
+  if(text === 'hi') {
+    bot.sendMessage(chatId, 'Hello there! 👋');
+  } else if(text === 'whats up') {
+    bot.sendMessage(chatId, 'Not much, just running ClawDBot! 😎');
+  } else {
+    bot.sendMessage(chatId, `You said: ${msg.text}`);
+  }
+});
